@@ -1,6 +1,6 @@
 ---
 title: 'Two Forms of Pre-rendering'
-date: '2020-01-01'
+date: '2023-09-17'
 ---
 
 I want to say something: **good title** and **good content**. The difference is in **what** it generates the HTML for a page.
