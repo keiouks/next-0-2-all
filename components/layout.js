@@ -4,7 +4,7 @@ import styles from './layout.module.css';
 import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
 
-const name = 'Keiouks';
+const name = '野生';
 export const siteTitle = `${name}\'s little world`;
 
 export default function Layout({ children, home }) {

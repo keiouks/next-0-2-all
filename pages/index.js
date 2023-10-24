@@ -17,9 +17,6 @@ export default function Home({allPostsData}) {
         <p>
           In this website - you can see the hold world
         </p>
-        <p>
-          <Link href='/posts/first-post'>go to the other page</Link>
-        </p>
       </section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Blog</h2>
