@@ -1,9 +1,9 @@
 ---
-title: 'just do some test kkl'
+title: 'uuu uuu uuu'
 date: '2023-09-18'
 ---
 
-this 555 using **some thing good** (with and without data) whenever possible because your page can be built once and served by CDN, which makes it much faster than having a server render the page on every request.
+this mmm mmm mmm uuu uuu uuu uuu uuu uuu uuu uuu whenever possible because your page can be built once and served by CDN, which makes it much faster than having a server render the page on every request.
 
 You can use Static Generation for many types of pages, including:
 

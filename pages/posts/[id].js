@@ -25,7 +25,7 @@ export async function getStaticPaths() {
     const paths = getAllPostIds();
     return {
         paths,
-        fallback: false,
+        fallback: 'blocking',
     }
 }
 
@@ -34,6 +34,7 @@ export async function getStaticProps({ params }) {
     return {
         props: {
             postData,
-        }
+        },
+        revalidate: 3600
     }
 }
