@@ -3,13 +3,17 @@ import Image from 'next/image';
 import styles from './layout.module.css';
 import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
+import Container from '@mui/material/Container';
+import Box from '@mui/material/Box';
+import Grid from '@mui/material/Grid';
+import { styled } from '@mui/material/styles';
 
 const name = '野生';
 export const siteTitle = `${name}\'s little world`;
 
 export default function Layout({ children, home }) {
   return (
-    <div className={styles.container}>
+    <Box sx={{ flexGrow: 1 }}>
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta
@@ -25,21 +29,9 @@ export default function Layout({ children, home }) {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      <header className={styles.header}>
-        {home ? (
-          <>
-            <Image
-              priority
-              src="/images/profile.jpg"
-              className={utilStyles.borderCircle}
-              height={144}
-              width={144}
-              alt=""
-            />
-            <h1 className={utilStyles.heading2Xl}>{name}</h1>
-          </>
-        ) : (
-          <>
+      <Grid container spacing={1}>
+        <Grid item xs={0} sm={4}>
+          <Container>
             <Link href="/">
               <Image
                 priority
@@ -50,20 +42,21 @@ export default function Layout({ children, home }) {
                 alt=""
               />
             </Link>
-            <h2 className={utilStyles.headingLg}>
-              <Link href="/" className={utilStyles.colorInherit}>
-                {name}
-              </Link>
-            </h2>
-          </>
-        )}
-      </header>
-      <main>{children}</main>
-      {!home && (
-        <div className={styles.backToHome}>
-          <Link href="/">← Back to home</Link>
-        </div>
-      )}
-    </div>
+            <h1 className={utilStyles.heading2Xl}>{name}</h1>
+          </Container>
+        </Grid>
+        <Grid item xs={12} sm={8}>
+          <Box>
+            <main>{children}</main>
+            {!home && (
+              <div className={styles.backToHome}>
+                <Link href="/">← Back to home</Link>
+              </div>
+            )}
+          </Box>
+        </Grid>
+      </Grid>
+    </Box>
+
   );
 }
