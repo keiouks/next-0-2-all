@@ -48,8 +48,8 @@ export default function Layout({ children, home, postsData = [] }) {
           <Box className={styles.middleWrap}>
             <MenuList>
               {
-                postsData.map(({ id, date, title }) => {
-                  return (<MenuItem><Link href={`/posts/${id}`}>{title}</Link></MenuItem>);
+                postsData.map(({ id, title }) => {
+                  return (<MenuItem><Link href={`/${id.join('/')}`}>{title}</Link></MenuItem>);
                 })
               }
             </MenuList>
