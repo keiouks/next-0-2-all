@@ -6,6 +6,7 @@ body {
     Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   line-height: 1.6;
   font-size: 18px;
+  background: var(--root-bg);
 }
 
 * {
@@ -24,4 +25,11 @@ a:hover {
 img {
   max-width: 100%;
   display: block;
+}
+
+:root {
+  --root-bg: #D6D9DB;
+  --nav-width: 300px;
+  --nav-bg: #292c2f;
+  --nav-item-color: #a1adb8;
 }
