@@ -1,4 +1,3 @@
-import utilStyles from '../styles/utils.module.css';
 import Head from 'next/head';
 import Layout from '../components/layout';
 import Date from '../components/date';
@@ -11,8 +10,8 @@ export default function Post({ postData, allPostsData }) {
             <title>{postData.title}</title>
         </Head>
           <article>
-          <h1 className={utilStyles.headingXl}>{postData.title}</h1>
-          <div className={utilStyles.lightText}>
+          <h1>{postData.title}</h1>
+          <div>
               <Date dateString={postData.date} />
           </div>
           <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
@@ -32,7 +31,6 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
   const allPostsData = getSortedPostsData();
   const postData = await getPostData(params.id[0]);
-  console.log(postData);
   return {
     props: {
       postData,
