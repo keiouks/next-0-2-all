@@ -1,7 +1,3 @@
-import Head from 'next/head';
-import Link from 'next/link';
-import Date from '../components/date';
-import Layout, { siteTitle } from '../components/layout';
 import { useState } from 'react';
 import styles from '../styles/Home.module.scss';
 import { getSortedPostsData } from '../lib/posts';
@@ -11,6 +7,7 @@ import classnames from 'classnames';
 
 export default function Home({allPostsData}) {
   const [showNav, setShowNav] = useState(true);
+  const [src, setSrc] = useState('/' + allPostsData[0].id.join('/'));
 
   const MoreAction = () => {
     setShowNav(!showNav);
@@ -23,27 +20,30 @@ export default function Home({allPostsData}) {
       })}>
         <div className='more-icon' onClick={MoreAction}><MoreIcon /></div>
         <div className='nav-inner'>
-          <ol className='list'>
+          <ul className='list' style={{padding: 0}}>
               {allPostsData.map(({ id, title }) => {
-                return (<li className='item'><Link href={`/${id.join('/')}`}>{title}</Link></li>);
+                return (<li className='item' onClick={() => setSrc(`/${id.join('/')}`)}>{title}</li>);
               })}
-          </ol>
+          </ul>
         </div>
       </div>
 
       <div className={classnames({
         [styles.container]: true,
         [styles['show-nav']]: showNav,
-      })}></div>
+      })}>
+        <iframe src={src} class='post-page' />
+      </div>
     </>
   );
 }
 
 export async function getStaticProps() {
-  const allPostsData = getSortedPostsData();
+  const allPostsData = getSortedPostsData(true);
   return {
     props: {
       allPostsData,
     },
+    revalidate: 3600
   };
 }

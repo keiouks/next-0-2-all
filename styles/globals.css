@@ -13,6 +13,10 @@ body {
   box-sizing: border-box;
 }
 
+ul {
+  padding-inline-start: 40px;
+}
+
 a {
   color: #0070f3;
   text-decoration: none;
@@ -32,4 +36,6 @@ img {
   --nav-width: 300px;
   --nav-bg: #292c2f;
   --nav-item-color: #a1adb8;
+  --nav-item-hover-color: #895c8f;
+  --post-max-width: 750px;
 }

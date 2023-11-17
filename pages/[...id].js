@@ -1,22 +1,22 @@
 import Head from 'next/head';
-import Layout from '../components/layout';
 import Date from '../components/date';
 import { getSortedPostsData, getPostData } from '../lib/posts';
+import styles from '../styles/Post.module.scss';
 
-export default function Post({ postData, allPostsData }) {
+export default function Post({ postData }) {
   return (
-    <Layout postsData={allPostsData}>
+    <>
         <Head>
             <title>{postData.title}</title>
         </Head>
-          <article>
+        <div className={styles.article}>
           <h1>{postData.title}</h1>
           <div>
               <Date dateString={postData.date} />
           </div>
           <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
-      </article>
-    </Layout>
+      </div>
+    </>
   );
 }
 
@@ -29,12 +29,11 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const allPostsData = getSortedPostsData();
+  getSortedPostsData();
   const postData = await getPostData(params.id[0]);
   return {
     props: {
       postData,
-      allPostsData,
     },
     revalidate: 3600
   }
