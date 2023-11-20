@@ -1,9 +1,9 @@
 ---
-title: 'Two Forms of Pre-rendering'
-date: '2023-09-17'
+title: '接地府'
+date: '2023-10-17'
 ---
 
-I want to say something: **good title** and **good content**. The difference is in **what** it generates the HTML for a page.
+散开电流: **good title** and **good content**. The difference is in **what** it generates the HTML for a page.
 
 - **good title** is so good to do something I don't know **build time**. The very good HTML is then _reused_ on each request.
 - **good content** is the xxxx-yyyy method that generates the HTML on **each request**.

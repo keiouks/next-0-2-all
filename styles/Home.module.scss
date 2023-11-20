@@ -44,7 +44,7 @@
           padding-left: 1em;
           color: var(--nav-item-color);
           cursor: pointer;
-          &:hover {
+          &:hover, &.active {
             background: var(--nav-item-hover-color);
           }
         }
