@@ -32,13 +32,13 @@ img {
 }
 
 :root {
-  --root-bg: white;
-  --nav-width: 300px;
-  --nav-bg: #f0efe7;
-  --nav-item-color: #413932;
-  --nav-item-hover-color: #f14e32;
-  --nav-item-hover-bg: #895c8f;
-  --post-max-width: 1880px;
-  --article-bg: white;
-  --article-body-font-size: 22px;
+  --root-bg: white; /*整个文档背影*/
+  --nav-width: 300px; /*菜单宽度*/
+  --nav-bg: #f0efe7; /*菜单背景*/
+  --nav-item-color: #413932; /*菜单项字颜色*/
+  --nav-item-hover-color: #f14e32; /*菜单项字选中或hover颜色*/
+  --nav-item-hover-bg: #895c8f; /*菜单项选中或hover背影颜色*/
+  --post-max-width: 1800px; /*中间文档宽度*/
+  --article-bg: white; /*中间文档背景*/
+  --article-body-font-size: 22px; /*中间文档body字号*/
 }
