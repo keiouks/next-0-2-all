@@ -45,7 +45,8 @@
           color: var(--nav-item-color);
           cursor: pointer;
           &:hover, &.active {
-            background: var(--nav-item-hover-color);
+            // background: var(--nav-item-hover-bg);
+            color: var(--nav-item-hover-color);
           }
         }
       }

@@ -14,7 +14,7 @@ export default function Post({ postData }) {
           <div>
               <Date dateString={postData.date} />
           </div>
-          <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+          <div class='body' dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
       </div>
     </>
   );

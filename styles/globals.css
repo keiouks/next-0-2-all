@@ -32,10 +32,13 @@ img {
 }
 
 :root {
-  --root-bg: #D6D9DB;
+  --root-bg: white;
   --nav-width: 300px;
-  --nav-bg: #292c2f;
-  --nav-item-color: #a1adb8;
-  --nav-item-hover-color: #895c8f;
-  --post-max-width: 750px;
+  --nav-bg: #f0efe7;
+  --nav-item-color: #413932;
+  --nav-item-hover-color: #f14e32;
+  --nav-item-hover-bg: #895c8f;
+  --post-max-width: 1880px;
+  --article-bg: white;
+  --article-body-font-size: 22px;
 }

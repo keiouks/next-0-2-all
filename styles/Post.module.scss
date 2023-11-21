@@ -3,4 +3,11 @@
   max-width: var(--post-max-width);
   margin: 0 auto;
   padding: 2em 1em;
+  background: var(--article-bg);
+
+  :global{
+    .body {
+      font-size: var(--article-body-font-size);
+    }
+  }
 }
