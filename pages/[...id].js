@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Date from '../components/date';
 import { getSortedPostsData, getPostData } from '../lib/posts';
 import styles from '../styles/Post.module.scss';
+import 'highlight.js/styles/github-dark.min.css';
 
 export default function Post({ postData }) {
   return (
