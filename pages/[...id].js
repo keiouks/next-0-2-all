@@ -30,6 +30,14 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
+  const id = params.id || [];
+  if (id.length !== 2 && id[1] !== 'post') {
+    return {
+      props: {
+        error: 'not found',
+      }
+    };
+  }
   getSortedPostsData();
   const postData = await getPostData(params.id[0]);
   return {

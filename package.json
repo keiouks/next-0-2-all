@@ -7,8 +7,8 @@
   "type": "module",
   "scripts": {
     "image": "node lib/tool.js",
-    "dev": "pnpm run image && next dev",
-    "build": "pnpm run image && next build",
+    "dev": "next dev",
+    "build": "next build",
     "start": "next start"
   },
   "dependencies": {

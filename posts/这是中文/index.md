@@ -4,7 +4,6 @@ date: '2023-09-18'
 ---
 
 this 555 555  xx xxx xx whenever possible because your page can be built once and served by CDN, which makes it much faster than having a server render the page on every request.
-
 You can use Static Generation for many types of pages, including:
 
 - test test
