@@ -1,11 +1,12 @@
 ---
-title: 'xxx xxx xxx'
-date: '2023-09-18'
+title: '天上有龙'
+date: '2023-11-30'
 ---
 
-this 555 555  xx xxx xx whenever possible because your page can be built once and served by CDN, which makes it much faster than having a server render the page on every request.
-You can use Static Generation for many types of pages, including:
+this 555 using **some thing good** (with and without data) whenever possible because your page can be built once and served by CDN, which makes it much faster than having a server render the page on every request.
 
+You can use Static Generation for many types of pages, including:
+![这是图片](./profile.jpg)
 - test test
 - paper posts
 - E-EEE product listings

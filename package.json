@@ -7,9 +7,9 @@
   "type": "module",
   "scripts": {
     "image": "node lib/tool.js",
-    "dev": "next dev",
+    "dev": "next dev -p 5001",
     "build": "next build",
-    "start": "next start"
+    "start": "next start -p 5001"
   },
   "dependencies": {
     "@emotion/react": "^11.11.1",
